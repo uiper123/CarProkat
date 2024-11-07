@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            checkBox2 = new CheckBox();
             reg_BT = new Button();
             log_bt = new Button();
             passwd_Log_BT = new TextBox();
@@ -36,14 +37,13 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            checkBox1 = new CheckBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Black;
-            panel1.Controls.Add(checkBox1);
+            panel1.Controls.Add(checkBox2);
             panel1.Controls.Add(reg_BT);
             panel1.Controls.Add(log_bt);
             panel1.Controls.Add(passwd_Log_BT);
@@ -59,6 +59,19 @@
             panel1.Size = new Size(500, 500);
             panel1.TabIndex = 0;
             // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.BackColor = Color.Transparent;
+            checkBox2.ForeColor = Color.Transparent;
+            checkBox2.Location = new Point(125, 271);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(113, 19);
+            checkBox2.TabIndex = 4;
+            checkBox2.Text = "Visible password";
+            checkBox2.UseVisualStyleBackColor = false;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
+            // 
             // reg_BT
             // 
             reg_BT.Font = new Font("Segoe UI", 15F);
@@ -68,6 +81,7 @@
             reg_BT.TabIndex = 2;
             reg_BT.Text = "Register";
             reg_BT.UseVisualStyleBackColor = true;
+            reg_BT.Click += reg_BT_Click;
             // 
             // log_bt
             // 
@@ -78,6 +92,7 @@
             log_bt.TabIndex = 2;
             log_bt.Text = "Login";
             log_bt.UseVisualStyleBackColor = true;
+            log_bt.Click += log_bt_Click;
             // 
             // passwd_Log_BT
             // 
@@ -133,18 +148,6 @@
             label1.Text = "Войдите в аккаунт";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.BackColor = Color.Transparent;
-            checkBox1.ForeColor = Color.Transparent;
-            checkBox1.Location = new Point(125, 271);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(113, 19);
-            checkBox1.TabIndex = 4;
-            checkBox1.Text = "Visible password";
-            checkBox1.UseVisualStyleBackColor = false;
-            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -170,6 +173,6 @@
         private TextBox passwd_Log_BT;
         private TextBox name_log_TB;
         private Label label3;
-        private CheckBox checkBox1;
+        private CheckBox checkBox2;
     }
 }

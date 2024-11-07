@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            loglinkisreg = new LinkLabel();
             register_BT = new Button();
             checkBox1 = new CheckBox();
             passwd1_reg_BT = new TextBox();
@@ -44,6 +45,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(loglinkisreg);
             panel1.Controls.Add(register_BT);
             panel1.Controls.Add(checkBox1);
             panel1.Controls.Add(passwd1_reg_BT);
@@ -61,10 +63,21 @@
             panel1.Size = new Size(500, 500);
             panel1.TabIndex = 1;
             // 
+            // loglinkisreg
+            // 
+            loglinkisreg.AutoSize = true;
+            loglinkisreg.Location = new Point(213, 387);
+            loglinkisreg.Name = "loglinkisreg";
+            loglinkisreg.Size = new Size(37, 15);
+            loglinkisreg.TabIndex = 5;
+            loglinkisreg.TabStop = true;
+            loglinkisreg.Text = "Login";
+            loglinkisreg.LinkClicked += loglinkisreg_LinkClicked;
+            // 
             // register_BT
             // 
             register_BT.Font = new Font("Segoe UI", 15F);
-            register_BT.Location = new Point(152, 339);
+            register_BT.Location = new Point(154, 339);
             register_BT.Name = "register_BT";
             register_BT.Size = new Size(148, 45);
             register_BT.TabIndex = 4;
@@ -192,5 +205,6 @@
         private Label label4;
         private CheckBox checkBox1;
         private TextBox passwd1_reg_BT;
+        private LinkLabel loglinkisreg;
     }
 }
